@@ -1,0 +1,38 @@
+body {
+  font-family: $main-font;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+html{
+  overflow-x: hidden;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+svg {
+  overflow: hidden;
+}
+
+button {
+  display: block;
+  padding: 0;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+br {
+  line-height: 1;
+  font-size: 0;
+}
+
+textarea {
+  font-family: inherit;
+}

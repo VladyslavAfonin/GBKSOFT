@@ -1,0 +1,40 @@
+.main{
+  display: flex;
+  padding: 80px 30px 80px 80px;
+  align-items: flex-start;
+  transition: all 0.3s ease-in-out;
+  &.active{
+    padding-left: 260px;
+    @include r(1219) {
+      padding-left:80px;
+      position: relative;
+    }
+    @include r(479) {
+      padding-left:70px;
+    }
+    &::before {
+      @include r(1219) {
+        content: "";
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 3;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+  @include r(1219) {
+    margin: 0 auto;
+    padding: 40px 20px 40px 80px;
+  }
+  @include r(1023) {
+    flex-direction: column;
+  }
+  @include r(479) {
+    max-width: 100%;
+    padding: 40px 10px 20px 70px;
+  }
+}

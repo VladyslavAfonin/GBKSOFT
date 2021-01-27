@@ -1,0 +1,292 @@
+.profile{
+  max-width: 390px;
+  margin-right: 20px;
+  position: relative;
+  @include r(1219) {
+    width: 290px;
+  }
+  @include r(1023) {
+    max-width: 100%;
+    margin: 0 0 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100% !important;
+  }
+  &__item{
+    border: 1px solid rgb(230, 234, 238);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding: 18px 30px;
+    @include r(1219) {
+      padding: 15px;
+    }
+    @include r(479) {
+      padding: 10px;
+    }
+    &:nth-of-type(1) {
+      padding: 30px;
+      @include r(1219) {
+        padding: 15px;
+      }
+      @include r(1023) {
+        width: 50%;
+      }
+      @include r(767) {
+        width: 40%;
+      }
+      @include r(639) {
+        width: 100%;
+      }
+      @include r(479) {
+        padding: 10px;
+      }
+    }
+    &:nth-of-type(2) {
+      @include r(1023) {
+        width: 50%;
+      }
+      @include r(767) {
+        width: 60%;
+      }
+      @include r(639) {
+        width: 100%;
+      }
+    }
+    &:last-child{
+      padding: 20px 12px 30px 30px;
+      @include r(1219) {
+        padding: 15px 12px 15px 15px;
+      }
+      @include r(1023) {
+        width: 100%;
+      }
+      @include r(479) {
+        padding: 10px 12px 10px 10px;
+      }
+    }
+  }
+  .profile__title{
+    font-size: 24px;
+    font-family: "Roboto";
+    color: rgb(39, 44, 48);
+    line-height: 1.3;
+    max-width: 235px;      
+    font-weight: 700;
+    margin-bottom: 12px;
+    @include r(1219) {
+      font-size: 22px;
+    }
+    @include r(767) {
+      font-size: 19px;
+    }
+    @include r(639) {
+      max-width: 100%;
+    }
+  }
+  .profile__status{
+    margin-bottom: 12px;
+    .profile__btn{
+      display: inline-block;
+      border-radius: 2px;
+      background-color: rgb(38, 54, 73);
+      opacity: 0.3;
+      font-size: 11px;
+      color: #fff;
+      text-transform: uppercase;  
+      padding: 5px 10px;
+      font-weight: 500;
+    }
+    .profile__btn-green{
+      margin-right: 10px;
+      background: #70c756;
+      opacity: 1;
+    }
+  }
+  .profile__published{
+    font-size: 14px;
+    color: rgb(145, 165, 184); 
+  }
+}
+
+.profile__infoListItem{
+  display: flex;
+  justify-content: space-between;
+  &:not(:last-of-type) {
+    margin-bottom: 12px;
+  }
+  > span{
+    width: calc(50% - 10px);
+    &:nth-of-type(1) {
+      @include r(479) {
+        width: 35%;
+      }
+    }
+    &:nth-of-type(2) {
+      @include r(479) {
+        width: calc(65% - 20px);
+      }
+    }
+  }
+  .name{
+    font-size: 14px;
+    color: rgb(39, 44, 48);
+    font-weight: 500;
+    line-height: 1.1;
+  }
+  .green-text{
+    color: #70c756;
+  }
+  .value-date{
+    background: #fce5e8;
+    color: #f17689;
+    padding: 4px 6px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  .value-text{
+    width: 100%;
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 500;
+  }
+  .value-arrow{
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      top: 1px;
+      right: -17px;
+      width: 15px;
+      height: 15px;
+      background: url(../img/arrow-right.png) no-repeat;
+    }
+  }
+  .value-increase,
+  .value-decrease{
+    position: relative;
+    margin-left: 15px;
+    padding-left: 12px;
+    background: url(../img/arrow-top.png) no-repeat;
+  }
+  .value-decrease{
+    background: url(../img/arrow-bottom.png) no-repeat;
+  }
+}
+
+.profile__subtitle{
+  font-size: 14px;
+  color: rgb(39, 44, 48);
+  font-weight: 500;
+  margin-bottom: 18px;
+  padding-right: 18px;
+  @include r(1219) {
+    margin-bottom: 15px;
+  }
+}
+
+.profile__enter{
+  position: relative;
+}
+
+.profile__textarea{
+  border: 1px solid rgb(236, 239, 241);
+  border-radius: 2px;
+  color:rgb(39, 44, 48);
+  font-size: 14px;
+  width: 328px;
+  resize: none;
+  overflow: hidden;
+  margin-bottom: 10px;
+  padding: 10px 60px 10px 18px;
+  @include r(1219) {
+    width: calc(100% - 17px);
+  }
+  @include r(479) {
+    padding: 10px 60px 10px 10px
+  }
+}
+.btn-post{
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  right: 31px;
+  top: 9px;
+  border-radius: 50%;
+  box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.14);
+  background: #fff url(../img/telegram.png) no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.post-list{
+  height: 240px;
+  overflow: auto;
+  padding-right: 12px;
+  @include r(1219) {
+    height: 250px;
+  }
+  @include r(1023) {
+    height: 205px;
+  }
+  @include r(767) {
+    height: 220px;
+  }
+  @include r(639) {
+    height: 235px;
+  }
+  &__item{
+    padding: 13px 20px;
+    border-radius: 2px;
+    background-color: rgb(241, 246, 255);
+    margin-bottom: 5px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &__date{
+    font-size: 12px;
+    color: rgb(144, 164, 174);
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  &__text{
+    font-size: 13px;
+    color: rgb(39, 44, 48);
+    line-height: 1.3;
+    font-weight: 500;  
+  }
+}
+
+.post-list::-webkit-scrollbar {
+  width: 6px;
+}
+.post-list::-webkit-scrollbar-track {
+    background: #f2f6f9;
+}
+.post-list::-webkit-scrollbar-thumb {
+    background-color: #c4d1de;
+}
+
+.btn-hidden-menu{
+  position: absolute;
+  top: -50px;
+  left: 0;
+  display: none;
+  width: 12px;
+  height: 18px;
+  cursor: pointer;
+  @include r(1219) {
+    // top: -28px;
+    // z-index: 5;
+    // left: 35px;
+    display: none;
+  }
+  &.active{
+    display: block;
+    @include r(1219) {
+      display: none;
+    }
+  }
+}

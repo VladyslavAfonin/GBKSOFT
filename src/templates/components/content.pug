@@ -1,0 +1,56 @@
+section.content
+  .tabs
+    ul.tabs__list
+      li(class="tabs__item", data-tab="1") Overview
+      li(class="tabs__item", data-tab="2") Maintenance
+      li(class="tabs__item", data-tab="3") Transactions
+      li(class="tabs__item", data-tab="4") Utilization
+      li(class="tabs__item active", data-tab="5") History
+
+    .tabcontent__list
+      div(class="tabcontent__item", data-tab-content="1")
+        p.tabcontent__text Overview content ...
+      div(class="tabcontent__item", data-tab-content="2")
+        p.tabcontent__text Maintenance content ...
+      div(class="tabcontent__item", data-tab-content="3")
+        p.tabcontent__text Transactions content ...
+      div(class="tabcontent__item", data-tab-content="4")
+        p.tabcontent__text Utilization content ...
+      div(class="tabcontent__item active", data-tab-content="5")
+        form(action="" class="filter")
+          .filter__select
+            label.filter__label Period
+            div.filter__choice
+              span Select
+              i.fa.fa-caret-down
+          .filter__input
+            label.filter__label Field Name
+            input(type="text" placeholder="Start typing...")
+          button.filter__button Apply
+        .table-wrapper
+          table.table__history
+            thead
+              th Date
+              th Updated By
+              th Field Name
+              th Previous Value
+              th New Value
+            tbody
+              tr
+                td mm/dd/yy
+                td Name
+                td Field Name
+                td
+                td
+              tr
+                td mm/dd/yy
+                td Name
+                td Field Name
+                td
+                td 
+              tr
+                td mm/dd/yy
+                td Name
+                td Field Name
+                td
+                td 

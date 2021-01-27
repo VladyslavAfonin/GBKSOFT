@@ -1,0 +1,17 @@
+extends settings/layout
+
+prepend html
+  - const lang = "ru";
+
+prepend head
+  - const pageTitle = "GBKSOFT test";
+  - const themeColor = "#ffffff";
+
+append head
+
+append menu
+  include components/menu
+
+append sections
+  include components/profile
+  include components/content
